@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>js实现轮播图</title>
+    <link rel="stylesheet" href="CSS/demo.css">
+</head>
+<body>
+<div id="container">
+    <div id="btn-left" class="pic-btn" onclick="imgFlide('left')">
+        <img class="arrow-left" src="image/icon/left.png" alt="右箭头">
+    </div>
+    <div id="btn-right" class="pic-btn" onclick="imgFlide('right')">
+        <img class="arrow-right" src="image/icon/right.png" alt="左箭头">
+    </div>
+    <div id="pic-box">
+        <ul id="pic-list" class="clearFix">
+            <li class="img-style" ></li>
+            <!--<li class="img-style" style="background-image: url('image/2.jpg')"></li>-->
+            <!--<li class="img-style" style="background-image: url('image/3.jpg')"></li>-->
+            <!--<li class="img-style" style="background-image: url('image/4.jpg')"></li>-->
+        </ul>
+    </div>
+</div>
+<script src="js/index.js" ></script>
+</body>
+</html>

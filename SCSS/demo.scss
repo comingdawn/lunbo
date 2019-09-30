@@ -1,0 +1,92 @@
+@charset "UTF-8";
+*{
+  margin: 0;
+  padding: 0;
+}
+ul,ol{
+  list-style: none;
+}
+//变量
+$pic-width : 1200px;
+$pic-height : 600px;
+$btn-width : 50px;
+$btn-height : 80px;
+$liSum : 4;
+
+#container{
+  width: $pic-width;
+  height: $pic-height;
+  margin: 10px auto;
+  position: relative;
+}
+.pic-btn{
+  width: $btn-width;
+  height: $btn-height;
+  position: absolute;
+  text-align: center;
+  color: #fff;
+  font-size: 40px;
+  line-height: 50px;
+  top: calc(50% - 1/2*#{$btn-height});
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+}
+.arrow-right{
+  width: 40px;
+  height: 40px;
+  margin-right: -10px;
+}
+.arrow-left{
+  width: 40px;
+  height: 40px;
+  margin-left: -10px;
+}
+@each $btnDir in left right {
+  #btn-#{$btnDir}{
+    background-image: linear-gradient(to #{$btnDir}, rgba(204, 204, 204, 0), #b0b0b0);
+    #{$btnDir}: 0;
+  }
+  #btn-#{$btnDir}:hover{
+    background-image: linear-gradient(to #{$btnDir}, rgba(150, 150, 150, 0), #515151);
+  }
+}
+#pic-box{
+  width: $pic-width;
+  height: $pic-height;
+  overflow: hidden;
+}
+#pic-list{
+  width: $liSum*$pic-width;
+  margin: 0 auto;
+  //transform: translate(0-$pic-width);
+  //transition: 3s;
+}
+.clearFix:after{
+  content: "";
+  clear: both;
+  display: block;
+}
+.img-style{
+  width: 1200px;
+  //width: $pic-width;
+  height: $pic-height;
+  float: left;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
